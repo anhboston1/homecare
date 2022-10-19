@@ -5,14 +5,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+  public homeOwnerMenuItems = [
+    { title: 'Post a project', url: '/folder/Inbox', icon: 'mail' },
+    { title: 'My projects', url: '/folder/Outbox', icon: 'paper-plane' },
+    { title: 'Chat', url: '/folder/Favorites', icon: 'heart' }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+  public contractorMenuItems = [
+    { title: 'Search a project', url: '/folder/Inbox', icon: 'mail' },
+    { title: 'Profile', url: '/folder/Outbox', icon: 'paper-plane' },
+    { title: 'Membership', url: '/folder/Favorites', icon: 'heart' }
+  ];
   constructor() {}
 }
