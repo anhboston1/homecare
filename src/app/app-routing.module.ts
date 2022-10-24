@@ -16,12 +16,20 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'homeowner-dashboard',
-    loadChildren: () => import('./homeowner-dashboard/homeowner-dashboard.module').then( m => m.HomeownerDashboardPageModule)
+    path: 'postproject',
+    loadChildren: () => import('./homeowner/postproject/postproject.module').then( m => m.PostprojectPageModule)
   },
   {
-    path: 'contractor-dashboard',
-    loadChildren: () => import('./contractor-dashboard/contractor-dashboard.module').then( m => m.ContractorDashboardPageModule)
+    path: 'projectlist',
+    loadChildren: () => import('./homeowner/projectlist/projectlist.module').then( m => m.ProjectlistPageModule)
+  },
+  {
+    path: 'bidproject',
+    loadChildren: () => import('./contractor/bidproject/bidproject.module').then( m => m.BidprojectPageModule)
+  },
+  {
+    path: 'searchprojects',
+    loadChildren: () => import('./contractor/searchprojects/searchprojects.module').then( m => m.SearchprojectsPageModule)
   }
 ];
 
