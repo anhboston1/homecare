@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserprofileService } from '../../services/userprofile.service';
 
 @Component({
   selector: 'app-projectlist',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectlistPage implements OnInit {
 
-  constructor() { }
+  constructor(private uService: UserprofileService) { }
 
   ngOnInit() {
   }
 
+  viewProject(id) {
+  }
+
+  editProject(id) {
+  }
+  
+  deleteProject(id) {
+  }
 }
