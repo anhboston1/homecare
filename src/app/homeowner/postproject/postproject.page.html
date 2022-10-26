@@ -5,5 +5,30 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <form [formGroup]="projectForm">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              <i class="fal fa-user"></i>
+            </ion-label>
+            <ion-input placeholder="Title" formControlName="title"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              <i class="fal fa-user"></i>
+            </ion-label>
+            <ion-input placeholder="Description" formControlName="description"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
 
 </ion-content>

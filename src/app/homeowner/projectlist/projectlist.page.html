@@ -5,10 +5,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header><b>Project list</b></ion-card-header>
-    <ion-card-content>
-      <ion-item-sliding> 
+
+      <!-- <ion-item-sliding> 
       <ion-grid *ngFor="let project of uService.projects">
               
         <ion-row>
@@ -26,8 +24,20 @@
 
       
       </ion-grid>
-    </ion-item-sliding>
-
-    </ion-card-content>
-  </ion-card>
+    </ion-item-sliding> -->
+    <ion-list >
+      <ion-item-sliding *ngFor = "let project of  uService.projects">
+        <ion-item>
+        {{project.title}}
+        </ion-item>
+        <ion-item-options>
+          <button ion-button (click)="viewProject(project.projectid)">View</button>
+          <button ion-button (click)="editProject(project.projectid)">Edit</button>
+          <button ion-button (click)="deleteProject(project.projectid)">Delete</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    
+      </ion-list>
+      <br>
+      <button ion-button (click)="add()">add</button>
 </ion-content>
